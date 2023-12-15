@@ -97,7 +97,7 @@
                     </div>                    
                 </div>
             </form>
-            <a href="{{ route('google-login') }}" class="btn--base w-100 btn-loading">Google login <i class="las la-arrow-right"></i></a>
+                                <a href="{{ route('google-login') }}" class="btn--base w-100 btn-loading">Google login <i class="las la-arrow-right"></i></a>
 
         </div>
     </div>

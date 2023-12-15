@@ -12,15 +12,13 @@ use App\Http\Controllers\User\LoginAPIController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/user-register', function () { return view('user.register');})->name('user-register');
-Route::get('/user-login', function () { return view('user.login');})->name('user-login');
-
+//Login using google
 Route::get('/auth/google', [LoginAPIController::class, 'googleLogin'])->name('google-login');
 Route::any('auth/google/callback', [LoginAPIController::class, 'callBackFromGoolge'])->name('google-callback');
-
-Route::get('/', function () { return view('index');});
 Route::get('/dashboard', function () { return view('user.dashboard');})->name('dashboard');
-Route::get('/dashboard', function () { return view('user.dashboard');});
+
+//Home page routing
+Route::get('/', function () { return view('index');});
 Route::get('/home', function () { return view('home');});
 Route::get('/contact-us', function () { return view('contact-us');});
 Route::get('/about-us', function () { return view('about-us');});
@@ -39,4 +37,5 @@ Route::get('/wish-list', function () { return view('wish-list');});
 Route::get('/track-order', function () { return view('track-order');});
 Route::get('/userLogin', function () { return view('track-order');})->name('userLogin');
 
+//User routing
 
