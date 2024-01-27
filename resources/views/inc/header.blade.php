@@ -51,7 +51,7 @@
                           </div>
                       </div>
                       <div class="top-control">
-                          <a href="">Track Order</a><span>•</span><a href="{{route('user-register')}}">Register</a><span>•</span><a href="{{route('user-login')}}">Login</a>
+                          <a href="">Track Order</a><span>•</span><a href="{{route('user-register') }}">Register</a><span>•</span><a href="{{route('user-login')}}">Login</a>
                       </div>
                       <div class="clearfix"></div>
                       <div class="top-offers show-mobile">

@@ -63,8 +63,8 @@
             <div class="account-logo text-center">
                 <a href="/" class="site-logo">
                     <img src="images/footflex111.png"  data-white_img="images/footflex111.png"
-                            data-dark_img="images/footflex111.png"
-                                alt="Shree Luxmi Electronics">
+                        data-dark_img="images/footflex111.png"
+                     alt="Shree Luxmi Electronics">
                 </a>
             </div>
             <h5 class="title">Log in and Stay Connected</h5>
@@ -93,11 +93,11 @@
                         <button type="submit" class="btn--base w-100 btn-loading">Login Now <i class="las la-arrow-right"></i></button>
                     </div>
                     <div class="col-lg-6 form-group">
-                    <a href="{{ route('google-login') }}" class="btn--base w-100 btn-loading">Google login <i class="las la-arrow-right"></i></a>
                     </div>                    
                 </div>
             </form>
-                                <a href="{{ route('google-login') }}" class="btn--base w-100 btn-loading">Google login <i class="las la-arrow-right"></i></a>
+             <a href="{{ route('google-login') }}" class="btn--base w-100 btn-loading">Google login <i class="las la-arrow-right"></i></a>
+             <a href="{{ route('facebook-login') }}" class="btn--base w-100 btn-loading">Facebook login <i class="las la-arrow-right"></i></a>
 
         </div>
     </div>

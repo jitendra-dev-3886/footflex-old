@@ -13,8 +13,14 @@ use App\Http\Controllers\User\LoginAPIController;
 |
 */
 //Login using google
+Route::get('user-register', [LoginAPIController::class, 'userRegister'])->name('user-register');
+
 Route::get('/auth/google', [LoginAPIController::class, 'googleLogin'])->name('google-login');
 Route::any('auth/google/callback', [LoginAPIController::class, 'callBackFromGoolge'])->name('google-callback');
+
+// login using fcaebook
+Route::get('/auth/facebook', [LoginAPIController::class, 'fbLogin'])->name('facebook-login');
+Route::any('auth/facebook/callback', [LoginAPIController::class, 'callBackFromFb'])->name('facebook-callback');
 Route::get('/dashboard', function () { return view('user.dashboard');})->name('dashboard');
 
 //Home page routing

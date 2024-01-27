@@ -19,6 +19,11 @@ return [
         'client_secret' => env('GOOGLE_SECRET_ID'),
         'redirect' => 'http://127.0.0.1:8000/auth/google/callback',
     ],
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_SECRET_ID'),
+        'redirect' => 'http://127.0.0.1:8000/auth/facebook/callback',
+    ],
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),

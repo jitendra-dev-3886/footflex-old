@@ -30,6 +30,40 @@ class LoginAPIController extends Controller
     {
         try {
             $user =  Socialite::driver('google')->user();
+            dd($user);
+            if ($userInDatabase = User::where('email', $user->email)->first()) {
+                $userInDatabase->google_id = $user->id;
+                $userInDatabase->save();
+            } else {
+                User::create([
+                    'email' => $user->email,
+                    'name' => $user->name,
+                    'google_id' => $user->id,
+                    'password' => Hash::make(Str::random(10)),
+                ]);
+            }
+            return redirect()->route('dashboard');
+        } catch (\Exception $e) {
+            return view('index');
+        }
+    }
+   /**
+     * Display a listing of the resource.
+     */
+    public function fbLogin()
+    {  
+        try {
+            return Socialite::driver('facebook')->redirect();
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
+        // return Socialite::driver('google')->redirect();
+    }
+    public function callBackFromFb()
+    {
+        try {
+            $user =  Socialite::driver('facebook')->user();
+            dd($user);
             if ($userInDatabase = User::where('email', $user->email)->first()) {
                 $userInDatabase->google_id = $user->id;
                 $userInDatabase->save();
